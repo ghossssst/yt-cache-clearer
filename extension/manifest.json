@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Clear Page Cache",
+    "version": "1.0",
+    "description": "An extension to clear the current page's cache.",
+    "permissions": [
+      "activeTab",
+      "browsingData"
+    ],
+    "background": {
+      "service_worker": "scripts/background.js"
+    },
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+      }
+    },
+    "icons": {
+    }
+}
+  
