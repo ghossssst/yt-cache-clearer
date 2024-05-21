@@ -1,11 +1,14 @@
 {
     "manifest_version": 3,
-    "name": "Clear Page Cache",
+    "name": "Clear youtubes Cache",
     "version": "1.0",
-    "description": "An extension to clear the current page's cache.",
+    "description": "An extension to clear youtubes cache whenever a new video is played.",
     "permissions": [
       "activeTab",
-      "browsingData"
+      "browsingData",
+      "webNavigation",
+      "scripting",
+      "https://www.youtube.com/*"
     ],
     "background": {
       "service_worker": "scripts/background.js"
