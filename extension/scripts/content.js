@@ -1,18 +1,18 @@
-let notification = document.createElement("div");
-notification.style.position = "fixed";
-notification.style.top = "10px";
-notification.style.right = "195px";
-notification.style.backgroundColor = "#f5f5f5";
-notification.style.color = "black";
-notification.style.fontFamily = "Courier New", "Courier", "monospace";
-notification.style.fontSize = "14px";
-notification.style.padding = "10px";
-notification.style.zIndex = "10000";
-notification.style.borderRadius = "0px";
-notification.textContent = "cache cleared";
-document.body.appendChild(notification);
+var old_url = '';
+var mutationObserver = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+        if (location.href != old_url) {
+            chrome.runtime.sendMessage({action: "clearCache"}, (response) => {
+                if (chrome.runtime.lastError) {
+                console.error(chrome.runtime.lastError);
+                } else {
+                console.log('Cache clear request sent');
+                }
+            });
+            old_url = location.href;
+            console.log('URL was changed');
+        }
+    });
+});
 
-
-setTimeout(() => {
-  notification.remove();
-}, 3000);
+mutationObserver.observe(document.documentElement, {childList: true, subtree: true});
