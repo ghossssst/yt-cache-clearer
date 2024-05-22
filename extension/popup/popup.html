@@ -4,13 +4,50 @@
   <title>Clear Page Cache</title>
   <style>
     body {
+      color: #1f1f1f;
+      margin: 0px;
+      margin-left: 5px;
+      background-color:whitesmoke ;
       width: 200px;
-      padding: 20px;
-      font-family: Arial, sans-serif;
+      padding: 0px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .linebreak {
+      padding-bottom: 0px;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color:#1f1f1f;
+    }
+
+    a:hover {
+      color: gray;
+    }
+
+    .directorylink:before{
+      margin: 0px;
+      content: "[\2606";
+    }
+
+    .directorylink:hover::before{
+      color: gray;
+      content: "[\2605";
     }
   </style>
 </head>
 <body>
+  <h2>yt cache clearer</h2>
+  <b class="subheading">information</b>
+  <div class="linebreak">
+    <b>&#9472;&#9472;&#9472;&#9472;</b>
+  </div>
+  <p class="directorylink"><a href="https://github.com/ghossssst/yt-cache-clear" target="_blank">]........github</a></p>
+  <p class="directorylink"><a href="https://luzer.town/" target="_blank">]........website</a></p>
   <script src="popup.js"></script>
 </body>
 </html>
