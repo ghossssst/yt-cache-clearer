@@ -1,16 +1,13 @@
-var old_url = '';
+var old_url = "";
+
 var mutationObserver = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
         if (location.href != old_url) {
+            console.log("YT Cache Clearer: URL changed, sending message to clear cache");
             chrome.runtime.sendMessage({action: "clearCache"}, (response) => {
-                if (chrome.runtime.lastError) {
-                console.error(chrome.runtime.lastError);
-                } else {
-                console.log('Cache clear request sent');
-                }
+                console.log("YT Cache Clearer: Cache clear request response", response);
             });
             old_url = location.href;
-            console.log('URL was changed');
         }
     });
 });

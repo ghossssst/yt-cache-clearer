@@ -1,13 +1,15 @@
 {
     "manifest_version": 3,
-    "name": "Clear youtubes Cache",
+    "name": "yt cache clearer",
     "version": "1.0",
     "description": "An extension to clear youtubes cache whenever a new video is played.",
     "permissions": [
+      "storage",
       "activeTab",
       "browsingData",
       "webNavigation",
-      "scripting"
+      "scripting",
+      "nativeMessaging"
     ],
     "host_permissions": [
       "*://*.youtube.com/*"
@@ -24,9 +26,17 @@
     "action": {
       "default_popup": "popup/popup.html",
       "default_icon": {
+        "16": "images/white/icon16x.png",
+        "32": "images/white/icon32x.png",
+        "48": "images/white/icon48x.png",
+        "128": "images/white/icon128x.png"
       }
     },
     "icons": {
+      "16": "images/white/icon16x.png",
+      "32": "images/white/icon32x.png",
+      "48": "images/white/icon48x.png",
+      "128": "images/white/icon128x.png"
     }
 }
   
