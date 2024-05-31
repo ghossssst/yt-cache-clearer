@@ -7,7 +7,7 @@ A simple browser extension that clears YouTube's cache - useful when using exten
   * Instal via chrome webstore: AWAITING REVIEW
 
 **--Method 2:** 
-  * Download repo 
+  * Download repo .zip file
   * access chrome://chrome/extensions/ 
   * enable "Developer mode" 
   * click "Load unpacked extension" 
