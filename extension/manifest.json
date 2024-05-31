@@ -5,9 +5,7 @@
     "description": "An extension to clear youtube's cache.",
     "author": "luzertown@gmail.com",
     "permissions": [
-      "storage",
       "browsingData",
-      "webNavigation",
       "scripting"
     ],
     "host_permissions": [
