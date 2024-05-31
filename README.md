@@ -1,6 +1,6 @@
 ![Marquee promo tile-01](https://github.com/ghossssst/yt-cache-clear/assets/115876478/58004ace-3bb2-4fdd-ab0b-e5e2c8f34d79)
 ___
-# yt-cache-clear
+# yt-cache-clearer
 
 A simple browser extension that clears YouTube's cache - useful when using extensions within YouTube (adblock).
 
