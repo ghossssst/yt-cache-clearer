@@ -1,55 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clear Page Cache</title>
-  <style>
-    body {
-      color: #1f1f1f;
-      margin: 0px;
-      margin-left: 5px;
-      background-color:whitesmoke ;
-      width: 200px;
-      padding: 0px;
-      font-family: "Courier New", Courier, monospace;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Page Cache</title>
+    <style>
+        @font-face {
+            font-family: "pixels";
+            src: url(../popup/pixels.woff2);
+        }
 
-    .linebreak {
-      padding-bottom: 0px;
-    }
+        .screenGrid {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            opacity: 0.1;
+            background-image: url(../popup/noise.gif);
+            background-color: rgba(255, 255, 255, 0.7);
+            background-blend-mode: lighten;
+            z-index: -1;
+            pointer-events: none;
+            display: none;
+        }
 
-    a:link {
-      text-decoration: none;
-    }
+        body {
+            border: 2px solid black;
+            outline: 2px dashed #21d38f;
+            color: #1f1f1f;
+            margin: 1px;
+            margin-left: 1px;
+            background-color: whitesmoke;
+            width: 245px;
+            height: 195px;
+            padding: 0px;
+            font-family: "pixels";
+        }
 
-    a {
-      color:#1f1f1f;
-    }
+        p {
+            padding: 0px;
+            margin: 0px;
+        }
 
-    a:hover {
-      color: gray;
-    }
+        .linebreak {
+            padding-bottom: 0px;
+        }
 
-    .directorylink:before{
-      margin: 0px;
-      content: "[\2606";
-    }
+        a:link {
+            text-decoration: none;
+        }
 
-    .directorylink:hover::before{
-      color: gray;
-      content: "[\2605";
-    }
-  </style>
+        a {
+            padding: 0px;
+            margin: 0px;
+            color: #1f1f1f;
+        }
+
+        .directorybutton {
+            font-family: "pixels";
+            font-size: 1em;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-left: 5px;
+            margin-left: 10px;
+            margin-right: 4px;
+            margin-top: 13px;
+            border-color: black;
+            border-style: solid;
+            border-width: 2px;
+            width: 160px;
+            height: 31px;
+            box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.5);
+            transition: all 0.05s ease;
+        }
+
+        .directorybutton:hover {
+            color: white;
+            background-color: #ff748b;
+            transform: translateY(4px);
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        .header {
+            width: 225px;
+            display: flex;
+            padding: 10px;
+            background-color: whitesmoke;
+            border-bottom: 2px solid black;
+        }
+    </style>
 </head>
+
 <body>
-  <h2>yt cache clearer</h2>
-  <b class="subheading">information</b>
-  <div class="linebreak">
-    <b>&#9472;&#9472;&#9472;&#9472;</b>
-  </div>
-  <p class="directorylink"><a href="https://github.com/ghossssst/yt-cache-clear" target="_blank">]........github</a></p>
-  <p class="directorylink"><a href="https://luzer.town/" target="_blank">]........website</a></p>
-  <script src="popup.js"></script>
+    <div class="screenGrid" style="display: block;"></div>
+    <div class="header">
+        <p>yt cache clearer</p>
+    </div>
+    <a href="https://chromewebstore.google.com/detail/yt-cache-clearer/lckccheofjolkmchpogcmpkekmggmffc?hl=en-GB&authuser=0" class="directorybutton" target="_blank">
+        <p>store-page</p>
+    </button>
+    <a href="https://github.com/ghossssst/yt-cache-clear" class="directorybutton" target="_blank">
+        <p>github</p>
+    </button>
+    <a href="https://luzer.town/" class="directorybutton" target="_blank">
+        <p>website</p>
+    </button>
+    <script src="popup.js"></script>
 </body>
+
 </html>
